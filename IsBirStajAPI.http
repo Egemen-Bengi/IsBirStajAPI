@@ -1,0 +1,6 @@
+@IsBirStajAPI_HostAddress = http://localhost:5017
+
+GET {{IsBirStajAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
