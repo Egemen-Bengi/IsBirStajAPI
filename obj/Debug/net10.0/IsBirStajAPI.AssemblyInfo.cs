@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IsBirStajAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66d86d18c7e9385bb4db1a9c8837796a78d37613")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaac59d3144ee2cce945368a0dc347d389686b56")]
 [assembly: System.Reflection.AssemblyProductAttribute("IsBirStajAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IsBirStajAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
