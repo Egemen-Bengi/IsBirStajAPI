@@ -10,5 +10,6 @@ namespace IsBirStajAPI.Interfaces
     public interface IDonanımRepositry
     {
         Task<Response<DonanımDto?>> GetDonanımByENAsync(string enNo);
+        Task<Response<bool>> UpdateKullaniciVeyaDurumAsync(string enNo, DonanımUpdateDto updateDto);
     }
 }

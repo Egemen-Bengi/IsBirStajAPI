@@ -31,5 +31,28 @@ namespace IsBirStajAPI.Repositories
             var cihazData = cihaz.ToDonanımDto();
             return Response<DonanımDto?>.Successful(cihazData);
         }
+
+        public async Task<Response<bool>> UpdateKullaniciVeyaDurumAsync(string enNo, DonanımUpdateDto updateDto)
+        {
+            var cihaz = await _context.Donanimlar.FirstOrDefaultAsync(d => d.EN.Trim() == enNo.Trim());
+            
+            if(cihaz == null)
+            {
+                return Response<bool>.Fail("Güncellenmek istenen cihaz bulunamadı");
+            }
+
+            if (string.IsNullOrWhiteSpace(updateDto.Kullanici))
+            {
+                cihaz.Kullanicisi = updateDto.Kullanici;
+            }
+            if (string.IsNullOrWhiteSpace(updateDto.Durum))
+            {
+                cihaz.Durumu = updateDto.Durum;
+            }
+            _context.Donanimlar.Update(cihaz);
+            await _context.SaveChangesAsync();
+
+            return Response<bool>.Successful("Cihaz bilgileri güncellendi");
+        }
     }
 }
